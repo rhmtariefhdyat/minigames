@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mybg{
+    height: 100vh;
+    background-color: rgba(156, 131, 95, 1);
+}
+
+.font-logo {
+    font-size: 70px;
+}
+
+.posisi-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posisi-logo-3{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.player1{
+    display: flex;
+    justify-content: center;
+}
+
+.versus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: red;
+}
+
+/* .gambar{
+    background-color: rgb(97, 97, 97);
+}
+.gambarCom{
+    background-color: rgb(97, 97, 97);
+} */
+
+
+.gambar:hover{
+    cursor: pointer;
+    background-color: rgb(24, 24, 24);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)ease-in-out;
+    transform: scale(110%);
+    -webkit-transform: scale(110%);
+    -moz-transform: scale(110%);
+    -ms-transform: scale(110%);
+    -o-transform: scale(110%);
+}
