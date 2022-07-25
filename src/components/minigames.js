@@ -33,12 +33,43 @@ const GameMini = () => {
             const option = ['✊', '✌','🖐']
             const bot = option[Math.floor(Math.random() * option.length)];
 
-            const el = document.querySelectorAll(".gambarCom");
+            // const el = document.querySelectorAll(".gambarCom");
 
-            el[bot].body.style.backgroundColor = "#00000";
-            console.log(el);
+            // // el[bot].body.style.backgroundColor = "#00000";
+            // // console.log(el);
 
             return bot;
+        }
+
+        winnerCalculate(playerPick, botPick) {
+            //kertas vs batu = player winner
+            //kertas vs gunting = bot winner
+            //gunting vs batu =  player winner
+            if (playerPick == botPick) {
+                return "Draw";
+            }
+            
+            const pick = [playerPick, botPick];
+            if (pick.includes("🖐") && pick.includes("✊")) {
+                if (playerPick == "🖐") {
+                    return "player winner";
+                } else {
+                    return "bot winner";
+                }
+            }
+            if (pick.includes("🖐") && pick.includes("✌")) {
+                if (playerPick == "✌") {
+                    return "player winner";
+                } else {
+                    return "bot winner";
+                }
+            }if (pick.includes("✌") && pick.includes("✊")) {
+                if (playerPick == "✊") {
+                    return "player winner";
+                } else {
+                    return "bot winner";
+                }
+            }
         }
     }
 
@@ -49,6 +80,7 @@ const GameMini = () => {
         
         console.log("pilihan kamu ", start.playerOption);
         console.log("pilihan bot ", start.botOption);
+        console.log("pemenang adalah ", start.winnerCalculate(start.playerOption, start.botOption));
     }
     return(
         <Container>
